@@ -1,0 +1,12 @@
+name = "cf-ai-security-analyzer-worker"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[[durable_objects]]
+binding = "SESSION_STATE"
+class_name = "SessionState"
+
+[[ai.bindings]]
+name = "AI"
+
+

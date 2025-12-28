@@ -1,0 +1,25 @@
+name = "cf-ai-security-analyzer-worker"
+main = "./src/index.ts"
+compatibility_date = "2024-12-01" # Use a recent date for better compatibility
+
+[vars]
+LLAMA_MODEL_ID = "@cf/meta/llama-3-8b-instruct" # Cloudflare Workers AI Llama 3.3 model ID
+
+[[durable_objects.bindings]]
+name = "SESSION_STATE"
+class_name = "SessionState"
+
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = [ "SessionState" ]
+
+[ai]
+binding = "AI"
+remote = true
+
+[unsafe]
+# NOTE: This is an experimental field and may change or break at any time.
+# Used for enabling WebSockets for Durable Objects.
+metadata = { web_sockets = "true" }
+

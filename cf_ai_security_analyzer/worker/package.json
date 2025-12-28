@@ -1,0 +1,20 @@
+{
+  "name": "cf-ai-security-analyzer-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare AI Website Security Analyzer Worker",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler deploy src/index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^4.56.0",
+    "@cloudflare/workers-types": "^4.20240529.0"
+  },
+  "dependencies": {
+    "@cloudflare/ai": "^1.0.0"
+  }
+}
